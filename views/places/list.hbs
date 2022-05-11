@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+<div class="info">
+    <h3>List of all Places</h3>
+    <a href="/places/new">Create new Place</a>
+    <ul>
+        {{#each places}}
+        <li>
+            <a href="/places/{{ this._id}}">{{ this.name}}</a>
+            |
+            <a href="/places/{{ this._id}}/delete">Delete</a>
+        </li>
+        {{/each }}
+    </ul>
+    
+</div>
+<div id="map"></div>
+
+<!--  Axios CDN  -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!--  Google Maps Key  -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4ZiBDVYfHu7jtG3VD_Wg1oBYign3mads"></script>
